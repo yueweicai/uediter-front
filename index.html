@@ -9,8 +9,16 @@
 </head>
 <body>
 <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+<button type="button" id="btn">提交</button>
 <script>
     var ue = UE.getEditor('editor');
+    $("#btn").click(function () {
+        var content = ue.getContent();
+        var url = 'http://localhost:8080/editor/getcontent';
+        $.post(url,{content:content},function(res){
+            console.log(res);
+        })
+    })
 </script>
 </body>
 </html>
