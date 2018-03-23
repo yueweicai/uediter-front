@@ -9,10 +9,5 @@
 ## 项目中使用UEditor时需要注意一下三点：
 #### 1.修改ueditor.config.js
 <code>
-  (function () {
-    window.UEDITOR_CONFIG = {
-        UEDITOR_HOME_URL: URL
-        // 服务器统一请求接口路径
-        , serverUrl: "http://localhost:8080/editor/controller.jsp"
-  })
-</code>  
+  window.UEDITOR_CONFIG ={ UEDITOR_HOME_URL: URL,serverUrl: "http://localhost:8080/editor/controller.jsp"
+</code>
