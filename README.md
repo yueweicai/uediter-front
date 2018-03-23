@@ -6,8 +6,17 @@
 #### 将图片上传的方式由表单提交模式更改为Ajax异步提交模式，屏蔽了iframe跨域引发的问题。
 #### 主要重写了源代码中的 domUtils.on() 函数。
 
-## 项目中使用UEditor时需要注意一下三点：
+## 项目中使用UEditor时需要注意一下两点：
 #### 1.修改ueditor.config.js
+
 <code>
   window.UEDITOR_CONFIG ={ UEDITOR_HOME_URL: URL,serverUrl: "http://localhost:8080/editor/controller.jsp"
 </code>
+
+#### 通过 serverUrl 设置服务器统一请求接口路径，使用时改成自己的后端项目地址
+
+#### 2.在引用UEditor组件的页面中需要先手工引入jquery
+
+<code>
+  <script src="ueditor/third-party/jquery-1.10.2.js"></script>
+</code>  
